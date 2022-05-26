@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(167, 35, 35), rgb(44, 19, 19));
+        }
+
+        .box {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(14, 14, 14, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+        }
+
+        fieldset {
+            border: 3px solid rgb(255, 0, 0);
+        }
+
+        legend {
+            border: 1px solid rgb(1, 2, 0);
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(255, 158, 30);
+            border-radius: 8px;
+        }
+
+        .inputBox {
+            position: relative;
+        }
+
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .inputUser:focus~.labelInput,
+        .inputUser:valid~.labelInput {
+            top: -20px;
+            font-size: 12px;
+            color: rgb(255, 30, 30);
+        }
+
+        #submit {
+            background-image: linear-gradient(to right, rgba(255, 158, 30), rgb(255, 158, 30));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        #submit:hover {
+            background-image: linear-gradient(to right, rgb(145, 87, 11), rgb(145, 87, 11));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Questionário de preferências</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="FilmeFav" id="FilmeFav" class="inputUser" required>
+                    <label for="FilmeFav" class="labelInput">Qual o seu filme favorito?</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="ultimoF" id="ultimoF" class="inputUser" required>
+                    <label for="ultimoF" class="labelInput">Qual o último filme que você assistiu?</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="SérieFav" id="SérieFav" class="inputUser" required>
+                    <label for="SérieFav" class="labelInput">Qual a sua série favorita?</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="ultimoS" id="ultimoS" class="inputUser" required>
+                    <label for="ultimoS" class="labelInput">Qual a última série que você assistiu?</label>
+                </div>
+                <br><br>
+                <p>Gênero preferido</p>
+                <div class="campo">
+                    <label for="PrefF">Filme</label>
+                    <select id="PrefF" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option>Ação</option>
+                        <option>Aventura</option>
+                        <option>Anime</option>
+                        <option>Comédia</option>
+                        <option>Documentário</option>
+                        <option>Drama</option>
+                        <option>Ficção Científica</option>
+                        <option>Romance</option>
+                        <option>Suspense</option>
+                        <option>Terror</option>
+                    </select>
+                </div>
+                <br>
+                <div class="campo">
+                    <label for="PrefS">Série</label>
+                    <select id="PrefS" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option>Ação</option>
+                        <option>Aventura</option>
+                        <option>Anime</option>
+                        <option>Comédia</option>
+                        <option>Documentário</option>
+                        <option>Drama</option>
+                        <option>Ficção Científica</option>
+                        <option>Romance</option>
+                        <option>Suspense</option>
+                        <option>Terror</option>
+                    </select>
+                </div>
+                <br>
+
+
+
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
